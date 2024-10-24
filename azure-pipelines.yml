@@ -1,17 +1,14 @@
 trigger:
-- main
-
-variables:
-  python.version: '3.11'
+- main'
 
 pool:
   vmImage: ubuntu-latest
 
-#strategy:
-#  matrix:
+strategy:
+  matrix:
 #    Python310:
-#    Python311:
-#      python.version: '3.11'
+    Python311:
+      python.version: '3.11'
 #    Python312:
 #      python.version: '3.12'
 
