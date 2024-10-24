@@ -1,8 +1,8 @@
 trigger:
 - main
 
-Python311:
-      python.version: '3.11'
+variables:
+  python.version: '3.11'
 
 pool:
   vmImage: ubuntu-latest
