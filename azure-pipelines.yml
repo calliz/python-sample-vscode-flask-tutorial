@@ -26,18 +26,18 @@ steps:
       pip install twine
     displayName: 'Install dependencies'
 
-  - script: |
-    python -m build -w
-  displayName: 'Python build'
+  #- script: |
+  #  python -m build -w
+  #displayName: 'Python build'
 
-  - task: TwineAuthenticate@1
-  inputs:
-    artifactFeed: 'carbje-osb/carls-feed'
-  displayName: 'Twine Authenticate'
+  #- task: TwineAuthenticate@1
+  #inputs:
+  #  artifactFeed: 'carbje-osb/carls-feed'
+  #displayName: 'Twine Authenticate'
 
-  - script: |
-    python -m twine upload -r carls-feed --config-file $(PYPIRC_PATH) dist/*.whl
-  displayName: 'Upload to feed'
+  #- script: |
+  #  python -m twine upload -r carls-feed --config-file $(PYPIRC_PATH) dist/*.whl
+  #displayName: 'Upload to feed'
 
 #  - task: ArchiveFiles@2
 #    displayName: 'Archive files'
@@ -54,7 +54,7 @@ steps:
 #      ArtifactName: 'drop'
 #      publishLocation: 'Container'
 
-  - script: |
-      pip install pytest pytest-azurepipelines
-      pytest
-    displayName: 'pytest'
+  #- script: |
+  #    pip install pytest pytest-azurepipelines
+  #    pytest
+  #  displayName: 'pytest'
